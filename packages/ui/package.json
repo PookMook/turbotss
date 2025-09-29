@@ -1,0 +1,43 @@
+{
+  "name": "@repo/ui",
+  "version": "0.0.0",
+  "private": true,
+  "source": "src/index.ts",
+  "module": "dist/module.js",
+  "types": "dist/types.d.ts",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "targets": {
+    "browser": false,
+    "main": false,
+    "module": {
+      "outputFormat": "esmodule",
+      "context": "browser",
+      "includeNodeModules": false,
+      "optimize": true,
+      "scopeHoist": true,
+      "sourceMap": true
+    }
+  },
+  "scripts": {
+    "dev": "parcel watch",
+    "watch": "parcel watch",
+    "build": "parcel build"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@parcel/bundler-library": "2.16.0",
+    "@parcel/config-default": "2.16.0",
+    "@parcel/macros": "^2.16.0",
+    "@parcel/packager-ts": "^2.16.0",
+    "@parcel/transformer-typescript-types": "^2.16.0",
+    "@types/node": "^22.15.3",
+    "@types/react": "19.1.0",
+    "@types/react-dom": "19.1.1",
+    "parcel": "2.16.0",
+    "typescript": "5.9.2"
+  },
+  "dependencies": {
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0"
+  }
+}
