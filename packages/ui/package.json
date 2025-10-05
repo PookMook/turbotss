@@ -20,6 +20,9 @@
     "build": "vite build"
   },
   "devDependencies": {
+   
+  },
+  "dependencies": {
     "@parcel/macros": "^2.16.0",
     "@repo/typescript-config": "workspace:*",
     "@types/node": "^22.18.8",
@@ -29,9 +32,7 @@
     "typescript": "5.9.2",
     "unplugin-parcel-macros": "^0.1.1",
     "vite": "^7.1.9",
-    "vite-plugin-dts": "^4.5.4"
-  },
-  "dependencies": {
+    "vite-plugin-dts": "^4.5.4",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   }
