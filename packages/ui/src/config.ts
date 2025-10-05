@@ -1,4 +1,3 @@
-// @ts-expect-error-next-line
 import { createConfig, globalCSS, v } from "./boomer.js" with { type: "macro" };
 
 // The export are for TypeScript type inference, we are not going to use them.

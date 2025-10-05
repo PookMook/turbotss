@@ -2,6 +2,7 @@ import { TanStackDevtools } from '@tanstack/react-devtools'
 import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 import { bodyClassName } from '@repo/ui'
+import styles from '@repo/ui/index.css?url'
 
 import Header from '../components/Header'
 
@@ -19,7 +20,12 @@ export const Route = createRootRoute({
         title: 'TanStack Start Starter',
       },
     ],
-    links: [],
+    links: [
+      {
+        rel: 'stylesheet',
+        href: styles,
+      },
+    ],
   }),
 
   shellComponent: RootDocument,
