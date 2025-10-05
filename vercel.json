@@ -5,7 +5,9 @@
   "installCommand": "pnpm install --frozen-lockfile",
   "functions": {
     "apps/tss/dist/server/**/*.js": {
-      "runtime": "nodejs20.x"
+      "engine":{
+        "node": "22.x"
+      }
     }
   },
   "rewrites": [
