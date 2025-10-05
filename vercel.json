@@ -1,0 +1,21 @@
+{
+  "buildCommand": "corepack enable pnpm && cd apps/tss && pnpm build",
+  "outputDirectory": "apps/tss/dist",
+  "framework": null,
+  "installCommand": "corepack enable pnpm && pnpm install --frozen-lockfile",
+  "functions": {
+    "apps/tss/dist/server/**/*.js": {
+      "runtime": "nodejs22.x"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ],
+  "env": {
+    "COREPACK_ENABLE_DOWNLOAD_PROMPT": "0",
+    "COREPACK_DEFAULT_TO_LATEST": "0"
+  }
+}
