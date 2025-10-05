@@ -1,0 +1,17 @@
+{
+  "buildCommand": "cd apps/tss && pnpm build",
+  "outputDirectory": "apps/tss/dist",
+  "framework": null,
+  "installCommand": "pnpm install --frozen-lockfile",
+  "functions": {
+    "apps/tss/dist/server/**/*.js": {
+      "runtime": "nodejs20.x"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}
