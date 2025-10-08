@@ -131,3 +131,25 @@ Learn more about the power of Turborepo:
 - [Filtering](https://turborepo.com/docs/crafting-your-repository/running-tasks#using-filters)
 - [Configuration Options](https://turborepo.com/docs/reference/configuration)
 - [CLI Usage](https://turborepo.com/docs/reference/command-line-reference)
+
+## Deploy to Vercel (Nitro + Turborepo)
+
+For this monorepo, deploy the `apps/tss` TanStack Start app to Vercel with these settings:
+
+- **Framework Preset**: Nitro
+- **Root Directory**: `apps/tss`
+- **Install Command**: `pnpm -C ../../ install --prefer-offline --frozen-lockfile`
+- **Build Command**: `pnpm turbo run build --filter=./...`
+- **Output Directory**: leave empty (Nitro Build Output API is auto-detected)
+- **Dev Command** (optional for previews): `nitro dev`
+
+Optional project settings:
+
+- **Include files outside the root directory in the Build Step**: enabled
+- **Skip deployments when there are no changes to the root directory or its dependencies**: enabled
+
+Notes:
+
+- The install step runs at the repository root so Vercel can use the root `pnpm-lock.yaml` for a headless install.
+- The Turbo filter ensures the `apps/tss` app (and its dependencies) build while respecting monorepo task graph.
+- The Nitro Vite plugin in `apps/tss/vite.config.ts` is configured with `preset: 'vercel'` which emits `.vercel/output` that Vercel deploys automatically.

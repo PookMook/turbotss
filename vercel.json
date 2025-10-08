@@ -1,5 +1,0 @@
-{
-  "buildCommand": "pnpm build",
-  "installCommand": "pnpm install --prefer-offline --frozen-lockfile",
-  "outputDirectory": "apps/tss/.vercel/output"
-}

@@ -4,16 +4,18 @@ import viteReact from '@vitejs/plugin-react'
 import viteTsConfigPaths from 'vite-tsconfig-paths'
 import { nitro } from 'nitro/vite'
 
-const config = defineConfig({
-  plugins: [
-    // this is the plugin that enables path aliases
-    viteTsConfigPaths({
-      projects: ['./tsconfig.json'],
-    }),
-    nitro({ config: { preset: 'vercel' } }),
-    tanstackStart(),
-    viteReact(),
-  ],
-})
+export default defineConfig(({ command }) => {
+  const isBuild = command === 'build'
 
-export default config
+  return {
+    plugins: [
+      // this is the plugin that enables path aliases
+      viteTsConfigPaths({
+        projects: ['./tsconfig.json'],
+      }),
+      ...(isBuild ? [nitro({ config: { preset: 'vercel' } })] : []),
+      tanstackStart(),
+      viteReact(),
+    ],
+  }
+})
