@@ -1,7 +1,6 @@
 import { TanStackDevtools } from '@tanstack/react-devtools'
 import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
-import { bodyClassName } from '@repo/ui'
 import styles from '@repo/ui/index.css?url'
 
 import Header from '../components/Header'
@@ -37,7 +36,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       <head>
         <HeadContent />
       </head>
-      <body className={bodyClassName()}>
+      <body>
         <Header />
         {children}
         <TanStackDevtools

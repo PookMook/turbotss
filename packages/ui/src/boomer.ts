@@ -39,6 +39,7 @@ type ExtraCSSDeclaration =
   | "WebkitTextSizeAdjust"
   | "WebkitFontSmoothing"
   | "MozOsxFontSmoothing"
+  | "WebkitTapHighlightColor"
   | "WebkitTextSizeAdjust";
 
 type CSSValue = string | number | Token;

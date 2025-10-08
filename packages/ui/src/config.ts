@@ -96,6 +96,11 @@ export const { queries, themeTypeForV, theme, queriesTypeForM } = createConfig({
         small: "4px",
         medium: "8px",
         large: "12px",
+        // Component-specific radii
+        buttonSmall: "4px",
+        buttonMedium: "4px",
+        buttonLarge: "8px",
+        buttonXlarge: "8px",
       },
       shadows: {
         raised:

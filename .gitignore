@@ -141,3 +141,5 @@ coverage/
 # Lock files (keep one, typically bun.lock for this project)
 package-lock.json
 yarn.lock
+
+reshaped/
