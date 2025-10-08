@@ -1,0 +1,4 @@
+{
+  "installCommand": "pnpm -C ../../ install --prefer-offline --frozen-lockfile",
+  "buildCommand": "pnpm turbo run build --filter=./..."
+}
