@@ -2174,6 +2174,10 @@ packages:
     resolution: {integrity: sha512-ecqj/sy1jcK1uWrwpR67UhYrIFQ+5WlGxth34WquCbamhFA6hkkwiu37o6J5xCHdo1oixJRfVRw+ywV+Hq/0Aw==}
     engines: {node: '>=8'}
 
+  detect-libc@2.1.2:
+    resolution: {integrity: sha512-Btj2BOOO83o3WyH59e8MgXsxEQVcarkUOpEYrubB0urwnN10yQ364rsiByU11nZlqWYZm05i/of7io4mzihBtQ==}
+    engines: {node: '>=8'}
+
   diff@8.0.2:
     resolution: {integrity: sha512-sSuxWU5j5SR9QQji/o2qMvqRNYRDOcBTgsJ/DeCf4iSN4gW+gNMXM7wFIP+fdXZxoNiAnHUTGjCr+TSWXdRDKg==}
     engines: {node: '>=0.3.1'}
@@ -3378,6 +3382,11 @@ packages:
 
   sprintf-js@1.0.3:
     resolution: {integrity: sha512-D9cPgkvLlV3t3IzL0D0YLvGA9Ahk4PcvVwUbN0dSGr1aP0Nrt4AEnTUbuGvquEC0mA64Gqt1fzirlRs5ibXx8g==}
+
+  srvx@0.8.14:
+    resolution: {integrity: sha512-DYI9dUn3UDV0KgL6IAIeIJCljrgfimSeDsEfUq1XcD5DLAvCC2ujzpLi5zGKZTxOs/gNfpgiiI/R3+8PUY2WQw==}
+    engines: {node: '>=20.16.0'}
+    hasBin: true
 
   srvx@0.8.9:
     resolution: {integrity: sha512-wYc3VLZHRzwYrWJhkEqkhLb31TI0SOkfYZDkUhXdp3NoCnNS0FqajiQszZZjfow/VYEuc6Q5sZh9nM6kPy2NBQ==}
@@ -6223,6 +6232,9 @@ snapshots:
 
   detect-libc@2.1.1: {}
 
+  detect-libc@2.1.2:
+    optional: true
+
   diff@8.0.2: {}
 
   dom-accessibility-api@0.5.16: {}
@@ -6611,7 +6623,7 @@ snapshots:
       cookie-es: 2.0.0
       fetchdts: 0.1.7
       rou3: 0.7.7
-      srvx: 0.8.9
+      srvx: 0.8.14
     optionalDependencies:
       crossws: 0.4.1(srvx@0.8.9)
 
@@ -6878,7 +6890,7 @@ snapshots:
 
   lightningcss@1.30.1:
     dependencies:
-      detect-libc: 2.1.1
+      detect-libc: 2.1.2
     optionalDependencies:
       lightningcss-darwin-arm64: 1.30.1
       lightningcss-darwin-x64: 1.30.1
@@ -7522,6 +7534,10 @@ snapshots:
   source-map@0.7.6: {}
 
   sprintf-js@1.0.3: {}
+
+  srvx@0.8.14:
+    dependencies:
+      cookie-es: 2.0.0
 
   srvx@0.8.9:
     dependencies:
